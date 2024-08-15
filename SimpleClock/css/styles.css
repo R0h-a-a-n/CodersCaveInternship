@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #1e3c72 0%, #2a5298 100%);
+    overflow: hidden;
+}
+
+#clock {
+    font-size: 80px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 80px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+#clock:hover {
+    transform: scale(1.05);
+}
+
+#clock {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    animation: move 20s infinite alternate ease-in-out;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    animation: move 25s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+@media (max-width: 768px) {
+    #clock {
+        font-size: 60px;
+        padding: 30px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #clock {
+        font-size: 40px;
+        padding: 20px 40px;
+    }
+}
