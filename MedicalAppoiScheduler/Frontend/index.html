@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Scheduler</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Schedule an Appointment</h1>
+    <form id="appointmentForm">
+        <label for="patient_name">Patient Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required><br><br>
+        <label for="doctor_name">Doctor Name:</label>
+        <input type="text" id="doctor_name" name="doctor_name" required><br><br>
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="datetime-local" id="appointment_time" name="appointment_time" required><br><br>
+        <button type="submit">Schedule</button>
+    </form>
+
+    <h2>Upcoming Appointments</h2>
+    <ul id="appointmentsList"></ul>
+
+    <script src="static/app.js"></script>
+</body>
+</html>
